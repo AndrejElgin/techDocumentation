@@ -1,0 +1,8 @@
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    border-right: 1px rgb(0, 0, 0) solid;
+    background-color: slategrey;
+}

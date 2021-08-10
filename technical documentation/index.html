@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <meta name="author" content="Andrey Elgin">
+    <meta name="description" content="A technical documentation page">
+    <title>Pug technical documentation</title>
+</head>
+<body>
+<nav id="navbar">
+
+    <header>
+    <h1>Technical documentation</h1>
+    </header>
+
+    <li><a class="nav-link" href="#Installation">Installation</a></li>
+    <li><a class="nav-link" href="#Attributes">Attributes</a></li>
+    <li><a class="nav-link" href="#Quoted_Attributes">Quoted Attributes</a></li>
+    <li><a class="nav-link" href="#Class_Literal">Class Literal</a></li>
+    <li><a class="nav-link" href="#ID_Literal">ID Literal</a></li>
+    <li><a class="nav-link" href="#Doctype_Shortcuts">Doctype Shortcuts</a></li>
+</nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Installation">
+            <h2>Installation</h2>
+            <p>Pug is available via npm</p>
+
+            <code>$ npm install pug</code>
+        </section>
+        <section class="main-section" id="Attributes">
+            <h2>Attributes</h2>
+
+            <p>Tag attributes are basically the similiar in pug. But their values are JavaScript</p>
+            here is pug
+            <code>a(href='//google.com') Google<br>
+                |<br>
+                |<br>
+                a(class='button' href='//google.com') Google<br>
+                |<br>
+                |<br>
+                a(class='button', href='//google.com') Google<br></code>
+            <p>and here is Html</p>
+            <code>
+                
+                &#60;a href="//google.com"&#62;Google&#60;/a&#62;<br>
+                &#60;a class="button" href="//google.com"&#62;Google&#60;/a&#62;<br>
+                &#60;a class="button" href="//google.com"&#62;Google&#60;/a&#62;<br>
+
+                
+            </code>
+            <p>JavaScript expressions work too</p>
+            <p> pug</p>
+            <code>- var authenticated = true<br>
+                body(class=authenticated ? 'authed' : 'anon')</code>
+            <p>Html</p>
+            <code>&lt;body class="authed"&gt;&lt;/body&gt;</code>
+        </section>
+        <section class="main-section" id="Quoted_Attributes">
+            <h2>Quoted Attributes</h2>
+            <p>If your attribute name contains odd characters that might interfere with JavaScript syntax, either 
+                quote it using "" or '', or use commas to separate different attributes. Examples of such characters 
+                include [] and () (frequently used in Angular 2).</p>
+            <code>div(class='div-class' '(click)'='play()')</code>
+        </section>
+        <section class="main-section" id="Class_Literal">
+            <h2>Class Literal</h2>
+            <p>Classes may be defined using a .classname syntax:</p>
+            <code>a.button</code> is the same as <code>&lt;a class="button"&gt;</code>
+            <p>Since div's are such a common choice of tag, it is the default if you omit the tag name:</p>
+            <code>.content</code> is the same as <code>&lt;div class="content"&gt;&lt;/div&gt;</code> 
+        </section>
+        <section class="main-section" id="ID_Literal">
+            <h2>ID Literal</h2>
+            <p>IDs can be described in a more simple way</p>
+            <code>a#main-link</code> which is the same as <code>&lt;a id="main-link"&gt;&lt;/a&gt;</code>
+        </section>
+        <section class="main-section" id="Doctype_Shortcuts">
+            <h2>Doctype Shortcuts</h2>
+            <ul>
+                <li>Doctype html. <code>&lt;!DOCTYPE html&gt;</code></li>
+                <li>Doctype XML. <code>&lt;?xml version="1.0" encoding="utf-8" ?&gt;</code></li>
+                <li>Doctype transitional <code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</code></li></li>
+                <li>Doctype strict <code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</code></li>
+                <li>Doctype frameset<code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;</code></li>
+            </ul>
+        </section>
+
+       
+    </main>
+    <footer>
+       
+        This page made by Andrey Elgin<br>
+     
+    </footer>
+
+</body>
+</html>
